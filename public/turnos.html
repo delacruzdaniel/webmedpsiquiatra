@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Turno - Dra. Blanca Páez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Calendly widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h3>Cargando...</h3>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo-principal-blanca-paez.svg.png" alt="Logo Dra. Blanca Páez" width="120" />
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="turnos.html">Turnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Agendar Turno</h1>
+            <p>Selecciona el horario que mejor se adapte a tus necesidades</p>
+        </div>
+    </section>
+
+    <!-- Turnos Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Información Importante</h2>
+                            <div class="alert alert-info">
+                                <h5><i class="fas fa-info-circle me-2"></i>Antes de agendar tu turno:</h5>
+                                <ul class="mb-0">
+                                    <li>Las consultas tienen una duración aproximada de 30 minutos</li>
+                                    <li>Se requiere pago anticipado para confirmar el turno</li>
+                                    <li>Puedes cancelar o reprogramar hasta 24 horas antes</li>
+                                    <li>La primera consulta incluye una evaluación completa</li>
+                                </ul>
+                            </div>
+
+                            <!-- Información de Pago -->
+                            <div class="payment-info mb-4">
+                                <h3 class="text-center mb-3">Información de Pago</h3>
+                                
+                                <!-- Argentina -->
+                                <div class="payment-method mb-4">
+                                    <h4><i class="fas fa-flag me-2"></i>Argentina</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Banco Galicia</h5>
+                                                    <p class="card-text">
+                                                        <strong>CBU:</strong> 0070123456789012345678<br>
+                                                        <strong>Titular:</strong> Dra. Blanca Páez<br>
+                                                        <strong>CUIL:</strong> 27-12345678-9
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Banco Nación</h5>
+                                                    <p class="card-text">
+                                                        <strong>CBU:</strong> 0110123456789012345678<br>
+                                                        <strong>Titular:</strong> Dra. Blanca Páez<br>
+                                                        <strong>CUIL:</strong> 27-12345678-9
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Colombia -->
+                                <div class="payment-method">
+                                    <h4><i class="fas fa-flag me-2"></i>Colombia</h4>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nequi</h5>
+                                            <p class="card-text">
+                                                <strong>Número:</strong> 300-123-4567<br>
+                                                <strong>Titular:</strong> Blanca Páez<br>
+                                                <strong>Email:</strong> contacto@drablancapaez.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning mt-3">
+                                    <h5><i class="fas fa-exclamation-triangle me-2"></i>Importante:</h5>
+                                    <ul class="mb-0">
+                                        <li>El pago debe realizarse antes de la consulta</li>
+                                        <li>Enviar comprobante de pago por WhatsApp</li>
+                                        <li>El turno se confirma una vez verificado el pago</li>
+                                        <li>Para consultas sobre pagos, contactar por WhatsApp</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Formulario de Pre-registro -->
+                            <div class="pre-registro mb-4">
+                                <h3 class="text-center mb-3">Datos de Pre-registro</h3>
+                                <form id="preRegistroForm" class="needs-validation" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="nombre" class="form-label">Nombre completo *</label>
+                                            <input type="text" class="form-control" id="nombre" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="telefono" class="form-label">Teléfono *</label>
+                                            <input type="tel" class="form-control" id="telefono" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="tipoConsulta" class="form-label">Tipo de Consulta *</label>
+                                            <select class="form-select" id="tipoConsulta" required>
+                                                <option value="">Seleccione una opción</option>
+                                                <option value="primera">Primera Consulta</option>
+                                                <option value="seguimiento">Consulta de Seguimiento</option>
+                                                <option value="urgencia">Consulta de Urgencia</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="motivo" class="form-label">Motivo de la consulta</label>
+                                            <textarea class="form-control" id="motivo" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-primary btn-lg">Continuar con el Agendamiento</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Calendly Widget (inicialmente oculto) -->
+                            <div id="calendlyWidget" class="d-none">
+                                <div class="text-center my-4">
+                                    <h3>Selecciona tu turno</h3>
+                                    <p class="text-muted">Elige el horario que mejor se adapte a tus necesidades</p>
+                                </div>
+                                <div class="calendly-inline-widget" data-url="https://calendly.com/blancapaezpsiquiatria" style="min-width:320px;height:700px;"></div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h4>¿Prefieres agendar por WhatsApp?</h4>
+                                <p>Si tienes dificultades con el sistema de agendamiento online, puedes contactarnos directamente por WhatsApp:</p>
+                                <a href="https://wa.me/5491112345678" class="btn btn-success btn-lg w-100">
+                                    <i class="fab fa-whatsapp me-2"></i>Agendar por WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Dra. Blanca Páez</h5>
+                    <p>Especialista en psiquiatría</p>
+                    <p>Médica Psiquiatra - UBA</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-phone me-2"></i>+54 9 11 1234-5678</p>
+                    <p><i class="fas fa-clock me-2"></i>Lunes a Viernes 9:00 - 18:00</p>
+                    <p><i class="fas fa-envelope me-2"></i>contacto@drablancapaez.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dra. Blanca Páez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Calendly widget -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="js/animations.js"></script>
+    <script src="js/loader.js"></script>
+    <script>
+        // Validación del formulario y manejo del Calendly
+        document.getElementById('preRegistroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (this.checkValidity()) {
+                // Guardar datos en localStorage
+                const formData = {
+                    nombre: document.getElementById('nombre').value,
+                    email: document.getElementById('email').value,
+                    telefono: document.getElementById('telefono').value,
+                    tipoConsulta: document.getElementById('tipoConsulta').value,
+                    motivo: document.getElementById('motivo').value
+                };
+                localStorage.setItem('preRegistroData', JSON.stringify(formData));
+                
+                // Ocultar formulario y mostrar Calendly
+                document.querySelector('.pre-registro').classList.add('d-none');
+                document.getElementById('calendlyWidget').classList.remove('d-none');
+            }
+            
+            this.classList.add('was-validated');
+        });
+    </script>
+</body>
+</html> 

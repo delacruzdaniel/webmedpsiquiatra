@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Dra. Blanca Páez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h3>Cargando...</h3>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo-principal-blanca-paez.svg.png" alt="Logo Dra. Blanca Páez" width="120" />
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="turnos.html">Turnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre-mi.html">Sobre Mí</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container mt-5 pt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 scroll-animate">
+                <h1 class="mb-4">Dra. Blanca Páez</h1>
+                <h3 class="text-primary mb-4">Especialista en Psiquiatría</h3>
+                <p class="lead mb-4">Médica psiquiatra con más de 15 años de experiencia en el tratamiento de diversos trastornos mentales y emocionales.</p>
+                <p class="mb-4">Mi enfoque se centra en proporcionar una atención integral y personalizada, combinando la medicina tradicional con terapias modernas para lograr el mejor resultado para cada paciente.</p>
+                <div class="mb-4">
+                    <h4>Especialidades:</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Trastornos de ansiedad</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Depresión</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Trastornos del estado de ánimo</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Trastornos de la personalidad</li>
+                    </ul>
+                </div>
+                <a href="turnos.html" class="btn btn-primary btn-lg">Agendar Consulta</a>
+            </div>
+            <div class="col-md-6 text-center scroll-animate">
+                <img src="img/doctora.jpg" alt="Dra. Blanca Páez" class="img-fluid rounded-circle" style="max-width: 400px;">
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrusel de Universidades -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Universidades que me avalan</h2>
+            <div id="universidadesCarousel" class="carousel slide universidades-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#universidadesCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#universidadesCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#universidadesCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/ucaLogo.jpg" class="d-block w-100" alt="Uca Logo">
+                        <div class="carousel-caption">
+                            <h5>Universidad Católica Argentina</h5>
+                            <p>Especialización en Psiquiatría</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/udcaLogo.jpg" class="d-block w-100" alt="UDCA logo">
+                        <div class="carousel-caption">
+                            <h5>Universidad de ciencias aplicadas y ambientales</h5>
+                            <p>Medicina</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/aasmLogo.jpg" class="d-block w-100" alt="Aasm Logo">
+                        <div class="carousel-caption">
+                            <h5>Asociación argentina de salud mental</h5>
+                            <p>Diplomatura en Neuropsicofarmacología, Diplomatura en consumos problematicos/adicciones y Diplomatura en estudios de género, diversidad y subjetividad</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#universidadesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#universidadesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 scroll-animate">
+                    <h5>Dra. Blanca Páez</h5>
+                    <p>Especialista en psiquiatría</p>
+                </div>
+                <div class="col-md-4 scroll-animate">
+                    <h5>Contacto</h5>
+                    <p>WhatsApp: +54 9 11 1234-5678</p>
+                    <p>Horario de atención: Lunes a Viernes 9:00 - 18:00</p>
+                </div>
+                <div class="col-md-4 scroll-animate">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dra. Blanca Páez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/loader.js"></script>
+</body>
+</html> 
