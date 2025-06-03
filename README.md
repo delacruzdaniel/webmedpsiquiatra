@@ -1,18 +1,23 @@
-# Sitio Web Dra. María González
+# Sitio Web Dra. Blanca Del Pilar Páez Vargas
 
-Este es el sitio web profesional de la Dra. María González, especialista en medicina general.
+Este es el sitio web profesional de la Dra. Blanca Del Pilar Páez Vargas, especialista en psiquiatría, que ofrece atención virtual cálida, humana y con enfoque integral.
+
+---
 
 ## Requisitos
 
-- Node.js (versión 14 o superior)
+- Node.js (versión 14 o superior)  
 - npm (incluido con Node.js)
+
+---
 
 ## Instalación
 
-1. Abre una terminal en la carpeta del proyecto
-2. Instala las dependencias:
-```bash
-npm install
+1. Abre una terminal en la carpeta del proyecto  
+2. Instala las dependencias ejecutando:  
+   ```bash
+   npm install
+
 ```
 
 ## Uso
