@@ -1,0 +1,591 @@
+/* Variables de colores - FÁCIL DE MODIFICAR */
+:root {
+    /* Colores principales */
+    --color-principal: #8BE0B6;     /* Verde agua - Color principal */
+    --color-secundario: #B4E5D0;    /* Verde agua claro - Color secundario */
+    --color-fondo: #F9FEFC;         /* Blanco verdoso muy suave - Fondo general */
+    --color-fondo-alt: #FFFFFF;     /* Blanco puro - Fondo alternativo */
+    
+    /* Colores de texto */
+    --color-texto: #2C4A3E;         /* Verde oscuro - Texto principal */
+    --color-texto-secundario: #3B8B70; /* Verde medio - Títulos */
+    --color-texto-claro: #FFFFFF;   /* Blanco - Texto sobre fondos oscuros */
+    --color-texto-decorativo: #A0D4C1; /* Verde agua medio - Textos decorativos */
+    
+    /* Colores de acento */
+    --color-hover: #6BC99B;         /* Verde agua más oscuro - Hover y acentos */
+    --color-borde: #E8F6F0;         /* Verde muy claro - Bordes y separadores */
+    --color-sombra: rgba(139, 224, 182, 0.15); /* Sombra con color principal */
+    --whatsapp-color: #25D366;      /* Color de WhatsApp */
+}
+
+/* Estilos básicos */
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    line-height: 1.8;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    padding-top: 120px;
+    letter-spacing: 0.3px;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-fondo-alt);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px var(--color-sombra);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    height: 100px;
+    width: auto;
+}
+
+.nav-link {
+    color: var(--color-texto) !important;
+    font-size: 1rem;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    padding-bottom: 0.5rem !important;
+}
+
+.nav-link:hover {
+    color: var(--color-principal) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: var(--color-principal) !important;
+    font-weight: 600;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-principal);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+    background-color: var(--color-principal);
+}
+
+/* Botones */
+.btn.btn-primary, .btn-primary {
+    background-color: var(--color-principal) !important;
+    border-color: var(--color-principal) !important;
+    color: var(--color-texto) !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+}
+
+.btn.btn-primary:hover, .btn-primary:hover {
+    background-color: var(--color-hover) !important;
+    border-color: var(--color-hover) !important;
+    color: var(--color-texto) !important;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    background-color: transparent !important;
+    color: var(--color-principal) !important;
+    border-color: var(--color-principal) !important;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-principal) !important;
+    color: var(--color-texto-claro) !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: rgba(139, 224, 182, 0.1); /* Fondo verdoso tenue */
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-texto-secundario);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-texto);
+    margin-bottom: 2rem;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: var(--color-fondo-alt);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--color-sombra);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--color-sombra);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto-secundario);
+}
+
+.feature-card p {
+    color: var(--color-texto);
+    line-height: 1.8;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: var(--color-fondo-alt);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--color-sombra);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--color-sombra);
+}
+
+.testimonial-card p {
+    color: var(--color-texto);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+    color: var(--color-texto-claro);
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.cta-section h2,
+.cta-section p {
+    color: var(--color-texto-claro);
+}
+
+.cta-section .btn-light {
+    background-color: var(--color-texto-claro);
+    color: var(--color-principal);
+    border-color: var(--color-texto-claro);
+}
+
+.cta-section .btn-light:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    border-color: var(--color-texto-claro);
+}
+
+.cta-section .btn-outline-light {
+    background-color: transparent;
+    color: var(--color-texto-claro);
+    border-color: var(--color-texto-claro);
+}
+
+.cta-section .btn-outline-light:hover {
+    background-color: var(--color-texto-claro);
+    color: var(--color-principal);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--color-texto-secundario) 0%, var(--color-principal) 100%);
+    color: var(--color-texto-claro);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+footer h5 {
+    color: var(--color-texto-claro);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.social-links a {
+    color: var(--color-texto-claro);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fondo-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--color-borde);
+    border-top: 5px solid var(--color-principal);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loader h3 {
+    color: var(--color-principal);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Iconos */
+.text-primary {
+    color: var(--color-principal) !important;
+}
+
+.fa-stethoscope,
+.fa-heartbeat,
+.fa-notes-medical {
+    color: var(--color-principal) !important;
+}
+
+/* Animaciones */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar .container {
+        padding: 0 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    body {
+        padding-top: 76px;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .page-header,
+    .turnos-section, .page-header-turnos {
+        margin-top: 5.5rem;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Optimizaciones de rendimiento */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Proceso de Atención - Números circulares */
+.process-step .step-number {
+    width: 56px;
+    height: 56px;
+    background: var(--color-principal);
+    color: var(--color-texto);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 2px 8px var(--color-sombra);
+    border: 2px solid var(--color-secundario);
+}
+
+/* Acordeón de Preguntas Frecuentes */
+.accordion-item {
+    border: 1.5px solid var(--color-principal);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px var(--color-sombra);
+    background: var(--color-fondo-alt);
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    box-shadow: none;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--color-principal);
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-principal);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--color-principal);
+}
+
+.accordion-button::after {
+    background-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-body {
+    background: var(--color-fondo-alt);
+    color: var(--color-texto);
+    border-radius: 0 0 10px 10px;
+    padding: 1.5rem;
+}
+
+/* Formularios y alertas en Turnos */
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 2px var(--color-principal)33;
+}
+.alert-info {
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    border-color: var(--color-principal);
+}
+.alert-warning {
+    background: #fffbe6;
+    color: var(--color-texto);
+    border-color: var(--color-hover);
+}
+.card.shadow-sm {
+    box-shadow: 0 4px 12px var(--color-sombra) !important;
+    border-radius: 12px;
+    border: 1.5px solid var(--color-borde);
+}
+
+/* Carrusel de Sobre Mí */
+.universidades-carousel .carousel-inner {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px var(--color-sombra);
+    background: var(--color-fondo-alt);
+}
+.universidades-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--color-texto-claro);
+    border-radius: 0 0 16px 16px;
+    padding: 1rem 2rem;
+}
+.universidades-carousel .carousel-caption h5 {
+    color: var(--color-texto-claro);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.universidades-carousel .carousel-caption p {
+    color: var(--color-texto-claro);
+    margin-bottom: 0;
+}
+.universidades-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--color-principal);
+}
+
+.page-header,
+.hero-section,
+main {
+    margin-top: 1.5rem;
+}
+
+.page-header {
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem;
+}
+.page-header p {
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Refuerzo para la primera sección de turnos */
+.turnos-section, .page-header-turnos {
+    margin-top: 2rem;
+}
+
+/* Íconos de servicios */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-fondo-alt);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--color-sombra);
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+}
+.service-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto-secundario);
+    margin-top: 0.5rem;
+}
+.service-card ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    display: inline-block;
+}
+.service-card ul li {
+    color: var(--color-texto);
+    line-height: 1.7;
+    padding-left: 1.2em;
+    position: relative;
+    margin-bottom: 0.3em;
+}
+.service-card ul li::before {
+    content: '\2022';
+    color: var(--color-principal);
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    top: 0.1em;
+}
+
+.service-card .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.service-card .service-icon i {
+    font-size: 3.2rem;
+    color: var(--color-principal);
+    background: var(--color-fondo);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px var(--color-sombra);
+    padding: 0.7rem 1rem;
+    display: inline-block;
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.service-card .service-icon i:hover {
+    background: var(--color-principal);
+    color: var(--color-texto-claro);
+    transform: scale(1.08);
+}
+
